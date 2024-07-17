@@ -1,43 +1,41 @@
 <template>
   <div id="root">
-    <div class="HomePage">
+    <div id="HomePage">
       <HomePage />
     </div>
-    <div class="page_1">
+    <div id="page_1">
       <Root_1 />
     </div>
-    <div class="page_2">
+    <div id="page_2">
       <Root_2 />
     </div>
-    <div class="page_3">
-      <NftCarousel />
-      <Subscribe_ />
+    <div id="Carousel_">
+      <Carousel_ />
+    </div>
+    <div id="footer">
       <Footer_ />
     </div>
   </div>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue';
-import Root_1 from './components/Root_1.vue';
-import Root_2 from './components/Root_2.vue';
-import NftCarousel from './components/Root_3/Carousel.vue';
-import Subscribe_ from './components/Root_3/Subscribe.vue';
-import Footer_ from './components/Root_3/Footer.vue';
+import HomePage from "./components/HomePage.vue";
+import Root_1 from "./components/Root_1.vue";
+import Root_2 from "./components/Root_2.vue";
+import Carousel_ from "./components/Root_3/Carousel.vue";
+import Footer_ from "./components/Root_3/Footer.vue";
 
 // import Root_3 from './components/Root_3/Root_3.vue';
 
-
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HomePage,
     Root_1,
     Root_2,
-    NftCarousel,
-    Subscribe_,
-    Footer_
-  }
+    Carousel_,
+    Footer_,
+  },
 };
 </script>
 
@@ -49,7 +47,7 @@ export default {
   font-family: Arial, sans-serif;
 }
 
-.HomePage {
+#HomePage {
   min-width: 200px;
   /* padding: 20px; */
   /* background: #2c3e50; */
@@ -58,8 +56,7 @@ export default {
   overflow-y: auto;
 }
 
-
-.page_1 {
+#page_1 {
   min-width: 200px;
   /* min-width: 700px; */
   /* flex: 1;
@@ -68,18 +65,28 @@ export default {
   overflow-y: auto;
 }
 
-.page_2 {
+#page_2 {
   min-width: 200px;
   overflow-y: auto;
 }
 
-.page_3 {
+#Carousel_ {
   min-width: 200px;
   /* min-width: 700px; */
   /* flex: 1;
   padding: 20px;
   background: #ecf0f1;*/
-  background: linear-gradient(180deg, #52057B 0%, #000000 100%);
+  background: #000000;
+  overflow-y: auto;
+}
+
+#footer {
+  min-width: 200px;
+  /* min-width: 700px; */
+  /* flex: 1;
+  padding: 20px;
+  background: #ecf0f1;*/
+  background: linear-gradient(180deg, #52057b 0%, #000000 100%);
   overflow-y: auto;
 }
 </style>
